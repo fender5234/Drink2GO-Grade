@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Academy: Drink2Go!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Montserrat-ExtraBold.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/leaflet.min.css" />
+    <link href="css/style.min.css{{ ver if ver}}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="header__logo-link">
+        <picture class="header__logo-picture">
+          <source media="(min-width: 980px)" srcset="img/icon-drink-2-to-go-logo-full.svg" />
+          <source media="(min-width: 660px)" srcset="img/icon-drink-2-to-go-logo-short.svg" />
+          <img
+            class="header__logo-content"
+            src="img/icon-drink-2-to-go-logo-small.svg"
+            alt="Логотип Магазина Drink2Go"
+          />
+        </picture>
+      </a>
+      <ul class="header__button-list">
+        <li class="header__button-list-item">
+          <button type="button" class="header__button header__button--login">
+            <span class="visually-hidden"> Вход в личный кабинет. </span>
+          </button>
+        </li>
+        <li class="header__button-list-item">
+          <button type="button" class="header__button header__button--shopping-cart">
+            <span class="visually-hidden"> Корзина покупателя. </span>
+          </button>
+        </li>
+      </ul>
+      <button type="button" class="header__button header__button-menu">
+        <span class="visually-hidden"> Меню навигации. </span>
+      </button>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a
+              href="#nowhere"
+              aria-label="Перейти на главную страницу."
+              class="header__nav-link header__nav-link--current"
+              >Главная</a
+            >
+          </li>
+          <li class="header__nav-item">
+            <a href="#nowhere" aria-label="Перейти на страницу каталога." class="header__nav-link">Каталог</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#nowhere" aria-label="Перейти на страницу доставки." class="header__nav-link">Доставка</a>
+          </li>
+          <li class="header__nav-item header__nav-item--last">
+            <a href="#nowhere" aria-label="Перейти на страницу о нас." class="header__nav-link">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>{% block main %}Страница в разработке.{% endblock %}</main>
+
+    <footer class="footer">
+      <section class="footer-section footer-section--social">
+        <a href="index.html" aria-label="Перейти на главную страницу." class="footer__logo-link">
+          <picture class="footer__logo-picture">
+            <source media="(min-width: 980px)" srcset="img/icon-drink-2-to-go-logo-short.svg" />
+            <source media="(min-width: 660px)" srcset="img/icon-drink-2-to-go-logo-short.svg" />
+            <img
+              class="footer__logo-content"
+              src="img/icon-drink-2-to-go-logo-short.svg"
+              alt="Логотип Магазина Drink2Go"
+            />
+          </picture>
+        </a>
+        <h2 class="visually-hidden">Drink2Go в социальных сетях.</h2>
+        <ul class="footer-section footer-section--social-list">
+          <li class="footer__social-list-item">
+            <a
+              href="https://vk.com/"
+              aria-label="Социальная сеть В Контакте."
+              class="footer__social-link footer__social-link--vk"
+            ></a>
+          </li>
+          <li class="footer__social-list-item">
+            <a
+              href="https://ru.pinterest.com/"
+              aria-label="Социальная сеть Pinterest"
+              class="footer__social-link footer__social-link--pin"
+            ></a>
+          </li>
+          <li class="footer__social-list-item">
+            <a
+              href="https://ok.ru"
+              aria-label="Социальная сеть Одноклассники"
+              class="footer__social-link footer__social-link--ok"
+            ></a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer-section footer-section--shop">
+        <h2 class="footer__title">Интернет-магазин</h2>
+        <ul class="footer__content-list">
+          <li class="footer__content-item">
+            <a href="#" class="footer__content-link"> каталог </a>
+          </li>
+          <li class="footer__content-item">
+            <a href="#" class="footer__content-link"> доставка </a>
+          </li>
+          <li class="footer__content-item">
+            <a href="#" class="footer__content-link"> способы оплаты </a>
+          </li>
+          <li class="footer__content-item">
+            <a href="#" class="footer__content-link"> о нас </a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer-section footer-section--media">
+        <h2 class="footer__title">Медиа</h2>
+        <ul class="footer__content-list">
+          <li class="footer__content-item">
+            <a href="#" class="footer__content-link"> блог </a>
+          </li>
+          <li class="footer__content-item">
+            <a href="#" class="footer__content-link"> информация для сми </a>
+          </li>
+          <li class="footer__content-item">
+            <a href="#" class="footer__content-link"> правовая информация </a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer-section footer-section--contacts">
+        <h2 class="footer__title">Контакты</h2>
+        <ul class="footer__content-list">
+          <li class="footer__content-item">
+            <address class="footer__content-link footer__content-link--contacts">
+              Санкт-Петербург, набережная реки Карповки, дом 5
+            </address>
+          </li>
+          <li class="footer__content-item">
+            <a href="tel:+79999999999" class="footer__content-link footer__content-link--contacts">
+              +7 (999) 999-99-99
+            </a>
+          </li>
+        </ul>
+      </section>
+      <div class="footer__dev-wrapper">
+        <a href="https://htmlacademy.ru/" class="footer__logo-link footer__logo-link--academy">
+          Разработано в HTML Academy
+          <svg
+            class="footer__logo footer__logo--academy"
+            width="12"
+            height="16"
+            viewBox="0 0 12 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use xlink:href="img/sprite.svg#logo-academy"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    {% if IS_DEV %}
+    <script src="js/dev.js"></script>
+    <script src="https://efiand.github.io/pineglade-pp/pineglade-pp.min.js" defer></script>
+    {% endif %}
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/libs/nouislider.min.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/script.js" type="module"></script>
+  </body>
+</html>

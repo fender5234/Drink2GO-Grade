@@ -1,0 +1,41 @@
+.primary-button {
+  box-sizing: border-box;
+  width: 113px;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: var(--color-base-white);
+  background-color: var(--color-base-primary);
+  border: none;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--color-primary-lighter);
+  }
+
+  &:active {
+    background-color: var(--color-primary-darker);
+  }
+
+  &--order {
+    position: relative;
+    width: 141px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 20px;
+      display: block;
+      width: 20px;
+      height: 29px;
+      mask-image: url("/img/sprite.svg#icon-shop");
+      mask-repeat: no-repeat;
+      background-color: var(--color-base-white);
+    }
+  }
+}

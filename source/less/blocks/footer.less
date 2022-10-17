@@ -1,0 +1,149 @@
+.footer__content-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__social-link {
+  position: relative;
+  display: block;
+  padding: 20px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--color-base-secondary);
+
+    &::before {
+      background-color: var(--color-base-primary);
+    }
+  }
+
+  &:active {
+    background-color: rgba(120, 89, 207, 0.25);
+
+    &::before {
+      background-color: var(--color-base-primary);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    width: 23px;
+    height: 23px;
+    mask-repeat: no-repeat;
+    background-color: var(--color-base-gray);
+  }
+
+  &--pin {
+    &::before {
+      mask-image: url("/img/sprite.svg#icon-pinterest");
+    }
+  }
+
+  &--ok {
+    &::before {
+      mask-image: url("/img/sprite.svg#icon-ok");
+    }
+  }
+
+  &--vk {
+    &::before {
+      mask-image: url("/img/sprite.svg#icon-vk");
+    }
+  }
+}
+
+.footer__social-list-item {
+  margin-left: 20px;
+}
+
+.footer__title {
+  margin: 0 0 20px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-base-primary);
+}
+
+.footer-section {
+  padding: 20px 20px 8px;
+  border-bottom: 1px solid var(--color-base-secondary);
+
+  &--social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 20px;
+  }
+
+  &--social-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+  }
+
+  &--contacts {
+    padding: 20px 20px 4px;
+  }
+}
+
+.footer__content-link {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-base-black);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &--contacts {
+    margin-bottom: 16px;
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none;
+    font-style: normal;
+  }
+}
+
+.footer__logo-link {
+  &--academy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--color-base-gray);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-base-primary);
+    }
+
+    &:active {
+      color: var(--color-primary-darker);
+    }
+  }
+}
+
+
+.footer__logo {
+  &--academy {
+    margin-left: 5px;
+  }
+}
+
+.footer__dev-wrapper {
+  padding: 16px 20px 30px;
+}

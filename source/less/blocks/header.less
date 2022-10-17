@@ -1,0 +1,157 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+
+  @media @tablet {
+    align-items: center;
+    padding: 0 20px;
+  }
+}
+
+.header__button {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  &:active {
+    background-color: var(--color-base-secondary);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    width: 18px;
+    height: 18px;
+    mask-repeat: no-repeat;
+    background-color: var(--color-base-black);
+  }
+
+  &--login::before {
+    mask-image: url("/img/sprite.svg#icon-logo");
+  }
+
+  &--shopping-cart::before {
+    mask-image: url("/img/sprite.svg#icon-basket");
+  }
+
+  &-menu::before {
+    mask-image: url("/img/sprite.svg#icon-menu");
+  }
+
+  &-menu--open::before {
+    mask-image: url("/img/sprite.svg#icon-closed");
+  }
+}
+
+.header__nav {
+  display: none;
+
+  &--show {
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    display: block;
+    width: 100%;
+  }
+
+  @media @tablet {
+    display: block;
+  }
+}
+
+.header__nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media @tablet-desktop {
+    display: flex;
+    flex-wrap: wrap;
+    order: 1;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid var(--color-base-secondary);
+
+    @media @tablet-desktop {
+      border: none;
+    }
+  }
+}
+
+.header__nav-item {
+  border-top: 1px solid var(--color-base-secondary);
+
+  @media @tablet-desktop {
+    border: none;
+  }
+}
+
+.header__nav-link {
+  display: block;
+  padding: 20px 10px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--color-base-black);
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--color-base-white);
+
+  @media @tablet {
+    padding: 31px 21px;
+    font-weight: 500;
+  }
+
+  @media @tablet-desktop {
+    &:hover {
+      color: var(--color-base-primary);
+    }
+
+    &:active {
+      background-color: var(--color-base-secondary);
+    }
+
+    &--current {
+      border-bottom: 2px solid var(--color-base-primary);
+    }
+  }
+}
+
+.header__button-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media @tablet-desktop {
+    order: 2;
+    margin-left: auto;
+  }
+}
+
+.header__logo-link {
+  display: block;
+  margin: 10px auto 10px 20px;
+
+  @media @tablet {
+    margin: 0 67px 0 0;
+  }
+}
+
+.header__button-menu {
+  @media @tablet-desktop {
+    display: none;
+  }
+}
